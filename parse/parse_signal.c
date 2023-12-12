@@ -3,27 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   parse_signal.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eaubry <eaubry@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mapierre <mapierre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:54:40 by mapierre          #+#    #+#             */
-/*   Updated: 2023/11/15 20:15:39 by eaubry           ###   ########.fr       */
+/*   Updated: 2023/12/12 17:55:49 by mapierre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/minishell.h"
 
+// ctrl d
 void	is_inside_sig(int sig)
 {
 	if (sig == SIGINT)
 		write(1, "\n", 1);
 }
-
+// ctrl d
 void	here_sig(int sig)
 {
 	if (sig == SIGINT)
 		exit(1);
 }
-
+//CTRL C
 void	handle_sigint(int sig)
 {
 	(void)sig;
